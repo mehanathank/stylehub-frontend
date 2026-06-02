@@ -39,13 +39,8 @@ export function AuthProvider({ children }) {
     const found = users.find(u => u.email === email && u.password === password)
     if (!found) return { ok: false, msg: 'Invalid email or password' }
     const session = { id: found.id, name: found.name, email: found.email, role: found.role }
-    if (remember) {
-      localStorage.setItem('sh_session', JSON.stringify(session))
-      sessionStorage.removeItem('sh_session')
-    } else {
-      sessionStorage.setItem('sh_session', JSON.stringify(session))
-      localStorage.removeItem('sh_session')
-    }
+    // always save to localStorage so data is not lost on refresh
+    localStorage.setItem('sh_session', JSON.stringify(session))
     setUser(session)
     return { ok: true }
   }
@@ -64,9 +59,7 @@ export function AuthProvider({ children }) {
     localStorage.setItem('sh_users', JSON.stringify(users))
     if (!updates.password) {
       const session = { ...user, name: updates.name || user.name, email: updates.email || user.email }
-      const stored = localStorage.getItem('sh_session')
-      if (stored) localStorage.setItem('sh_session', JSON.stringify(session))
-      else sessionStorage.setItem('sh_session', JSON.stringify(session))
+      localStorage.setItem('sh_session', JSON.stringify(session))
       setUser(session)
     }
   }
