@@ -16,7 +16,7 @@ function getUsers() {
 
 function initSession() {
   seedAdmin()
-  const s = localStorage.getItem('sh_session') || sessionStorage.getItem('sh_session')
+  const s = localStorage.getItem('sh_session')
   return s ? JSON.parse(s) : null
 }
 
@@ -47,7 +47,6 @@ export function AuthProvider({ children }) {
 
   function logout() {
     localStorage.removeItem('sh_session')
-    sessionStorage.removeItem('sh_session')
     setUser(null)
   }
 
