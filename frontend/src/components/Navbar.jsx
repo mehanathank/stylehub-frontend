@@ -34,7 +34,7 @@ export default function Navbar() {
       {/* Always visible on all screen sizes */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
         <span onClick={() => setOpen(false)}>
-          {user ? <AccountDropdown /> : <Link to="/login" className="nav-icon-btn"><FiUser size={22} /></Link>}
+          {user ? <AccountDropdown /> : <Link to="/login" className="nav-icon-btn" style={{ display: 'flex', alignItems: 'center', gap: 4 }}><FiUser size={22} /><span style={{ fontSize: 14 }}>Login</span></Link>}
         </span>
         <Link to="/wishlist" className="nav-icon-btn" onClick={handleWishlist}><FiHeart size={22} /></Link>
         <Link to="/cart" className="nav-icon-btn nav-cart-btn" onClick={handleCart}><FiShoppingCart size={20} /></Link>
