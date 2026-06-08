@@ -48,7 +48,7 @@ export function AuthProvider({ children }) {
         return { ok: true }
       } catch (err) {
         if (attempt < 6) await new Promise(r => setTimeout(r, 10000))
-        else return { ok: false, msg: 'Server is taking too long to respond. Please try again.' }
+        else return { ok: false, msg: err.message || 'Server is taking too long to respond. Please try again.' }
       }
     }
   }
