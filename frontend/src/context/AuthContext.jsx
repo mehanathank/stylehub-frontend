@@ -28,7 +28,7 @@ export function AuthProvider({ children }) {
       setUser(session)
       return { ok: true }
     } catch (err) {
-      return { ok: false, msg: 'Server error. Please try again.' }
+      return { ok: false, msg: 'Server is starting up, please wait a moment and try again.' }
     }
   }
 
@@ -46,7 +46,7 @@ export function AuthProvider({ children }) {
       setUser(session)
       return { ok: true }
     } catch (err) {
-      return { ok: false, msg: 'Server error. Please try again.' }
+      return { ok: false, msg: 'Server is starting up, please wait a moment and try again.' }
     }
   }
 
