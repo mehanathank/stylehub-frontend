@@ -66,7 +66,7 @@ export default function AdminOrders() {
   ]
 
   return (
-    <div style={{ padding: 32 }}>
+    <div style={{ padding: '20px 16px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24, flexWrap: 'wrap', gap: 12 }}>
         <h2 style={{ fontFamily: 'Playfair Display,serif', color: '#6b3a2a', margin: 0 }}>Orders</h2>
         <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Search by order ID or customer..."

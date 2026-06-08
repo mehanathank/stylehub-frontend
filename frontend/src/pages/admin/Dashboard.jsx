@@ -33,11 +33,11 @@ export default function Dashboard() {
   ]
 
   return (
-    <div style={{ padding: 32 }}>
+    <div style={{ padding: '20px 16px' }}>
       <h2 style={{ fontFamily: 'Playfair Display,serif', color: '#6b3a2a', marginBottom: 8 }}>Dashboard</h2>
       <p style={{ color: '#888', marginBottom: 32 }}>Welcome back! Here's what's happening.</p>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 20, marginBottom: 40 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(140px,1fr))', gap: 16, marginBottom: 32 }}>
         {stats.map(({ label, value, icon, color }) => (
           <div key={label} style={{ background: '#fff', borderRadius: 14, padding: 24, border: '1px solid #e0c9a6', borderLeft: `4px solid ${color}` }}>
             <div style={{ fontSize: 28, marginBottom: 8 }}>{icon}</div>

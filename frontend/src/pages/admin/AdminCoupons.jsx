@@ -73,7 +73,7 @@ export default function AdminCoupons() {
   ]
 
   return (
-    <div style={{ padding: 32 }}>
+    <div style={{ padding: '20px 16px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24, flexWrap: 'wrap', gap: 12 }}>
         <h2 style={{ fontFamily: 'Playfair Display,serif', color: '#6b3a2a', margin: 0 }}>Coupons</h2>
         <button onClick={() => setShowAdd(true)} className="btn-primary" style={{ padding: '9px 20px', fontSize: 14 }}>+ Create Coupon</button>

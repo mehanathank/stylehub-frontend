@@ -102,7 +102,7 @@ export default function AdminProducts() {
   ]
 
   return (
-    <div style={{ padding: 32 }}>
+    <div style={{ padding: '20px 16px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24, flexWrap: 'wrap', gap: 12 }}>
         <h2 style={{ fontFamily: 'Playfair Display,serif', color: '#6b3a2a', margin: 0 }}>Products</h2>
         
