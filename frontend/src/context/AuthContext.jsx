@@ -33,7 +33,7 @@ export function AuthProvider({ children }) {
   }
 
   async function login(email, password) {
-    for (let attempt = 1; attempt <= 3; attempt++) {
+    for (let attempt = 1; attempt <= 6; attempt++) {
       try {
         const res = await fetch(apiUrl('/api/users/login'), {
           method: 'POST',
@@ -47,8 +47,8 @@ export function AuthProvider({ children }) {
         setUser(session)
         return { ok: true }
       } catch (err) {
-        if (attempt < 3) await new Promise(r => setTimeout(r, 3000))
-        else return { ok: false, msg: 'Server is waking up, please try again in a few seconds.' }
+        if (attempt < 6) await new Promise(r => setTimeout(r, 10000))
+        else return { ok: false, msg: 'Server is taking too long to respond. Please try again.' }
       }
     }
   }
