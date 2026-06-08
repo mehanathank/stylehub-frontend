@@ -107,7 +107,7 @@ export default function Login() {
             </div>
             
             <button type="submit" className="auth-submit" disabled={loading}>
-              {loading ? 'Please wait, server is waking up...' : 'Login'}
+              {loading ? 'Logging in...' : 'Login'}
             </button>
             
           </form>
