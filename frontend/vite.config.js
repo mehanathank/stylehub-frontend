@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'https://stylehub-backend-5.onrender.com'
+      '/api': 'https://stylehub-backend-6.onrender.com'
     }
   }
 })
