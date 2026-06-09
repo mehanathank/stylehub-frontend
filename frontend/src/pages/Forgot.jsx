@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Navbar from '../components/Navbar';
+import { FiArrowLeft } from 'react-icons/fi';
 import { apiUrl } from '../api';
 
 export default function Forgot() {
@@ -213,9 +213,8 @@ export default function Forgot() {
 
   return (
     <>
-      <Navbar />
       <div style={{
-        minHeight: '90vh',
+        minHeight: '100vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -233,6 +232,9 @@ export default function Forgot() {
           borderTop: '4px solid #8b4513',
           boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
         }}>
+          <button onClick={() => navigate(-1)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#8b4513', display: 'flex', alignItems: 'center', gap: 4, fontSize: 14, fontWeight: 600, marginBottom: 16, padding: 0 }}>
+            <FiArrowLeft size={18} /> Back
+          </button>
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: 32 }}>
             <h1 style={{

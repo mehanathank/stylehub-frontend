@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import Navbar from '../components/Navbar'
+import { FiArrowLeft } from 'react-icons/fi'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 
@@ -71,10 +71,11 @@ export default function Signup() {
 
   return (
     <>
-      <Navbar />
-      
       <div className="auth-bg">
         <div className="auth-card">
+          <button onClick={() => navigate(-1)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#8b4513', display: 'flex', alignItems: 'center', gap: 4, fontSize: 14, fontWeight: 600, marginBottom: 16, padding: 0 }}>
+            <FiArrowLeft size={18} /> Back
+          </button>
           <h1 className="auth-brand">StyleHub</h1>
           <p className="auth-sub">Create your account</p>
           

@@ -56,7 +56,7 @@ body { font-family: 'Poppins', sans-serif; background-color: #fdf6ee; }
 .success-msg { color: green; font-size: 13px; margin-top: 4px; }
 
 /* ── Auth ── */
-.auth-bg { min-height: 90vh; display: flex; justify-content: center; align-items: center; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('/image/home/back.png'); background-size: cover; background-position: center; padding: 40px 16px; }
+.auth-bg { min-height: 100vh; display: flex; justify-content: center; align-items: center; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('/image/home/back.png'); background-size: cover; background-position: center; padding: 40px 16px; }
 .auth-card { background: #fff; border-radius: 16px; padding: 50px 60px; width: 100%; max-width: 460px; border-top: 4px solid #8b4513; }
 .auth-brand { font-family: 'Playfair Display', serif; color: #8b4513; margin-bottom: 4px; }
 .auth-sub { color: #888; margin-bottom: 24px; }
